@@ -16,11 +16,12 @@ const SearchBar = ({
 }) => {
   const [isListVisible, setListVisibilty] = useState(false);
   useEffect(() => {
-    Keyboard.addListener('keyboardWillShow', keyboardWillShow);
-    Keyboard.addListener('keyboardWillHide', keyboardWillHide);
+    //keyboard will show does not exist in android
+    Keyboard.addListener('keyboardDidShow', keyboardWillShow);
+    Keyboard.addListener('keyboardDidHide', keyboardWillHide);
     return () => {
-      Keyboard.removeListener('keyboardWillShow', keyboardWillShow);
-      Keyboard.removeListener('keyboardWillHide', keyboardWillHide);
+      Keyboard.removeListener('keyboardDidShow', keyboardWillShow);
+      Keyboard.removeListener('keyboardDidHide', keyboardWillHide);
     };
   }, []);
 
