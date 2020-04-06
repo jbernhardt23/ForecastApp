@@ -15,3 +15,8 @@ iOS
 Android
 
 `npm run android`
+
+
+Run Tests
+
+`npm test`
