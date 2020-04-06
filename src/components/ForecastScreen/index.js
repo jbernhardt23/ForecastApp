@@ -17,16 +17,13 @@ import {getFromLocalStorage, storeInLocalStorage} from '../../utils/helpers';
 const RECENT_CITIES = 'recent_cities';
 
 class ForecastScreen extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      recentCities: [],
-      currentCity: '',
-      search: '',
-      temperature: {},
-      isSearchLoading: false,
-    };
-  }
+  state = {
+    recentCities: [],
+    currentCity: '',
+    search: '',
+    temperature: {},
+    isSearchLoading: false,
+  };
 
   async componentDidMount() {
     //load recent cities from local storage
