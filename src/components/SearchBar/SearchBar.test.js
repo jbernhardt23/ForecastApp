@@ -40,6 +40,6 @@ test('should set keyboard listeners', () => {
   const mockEvent = jest.spyOn(Keyboard, 'addListener');
   render(<SearchBar value="" />);
   expect(mockEvent).toHaveBeenCalledTimes(2);
-  expect(mockEvent.mock.calls[0][0]).toBe('keyboardWillShow');
-  expect(mockEvent.mock.calls[1][0]).toBe('keyboardWillHide');
+  expect(mockEvent.mock.calls[0][0]).toBe('keyboardDidShow');
+  expect(mockEvent.mock.calls[1][0]).toBe('keyboardDidHide');
 });
